@@ -172,12 +172,7 @@ class FileRepresenter{
         fileContent += "//\n//\t\(className).\(lang.fileExtension)\n"
         if let me = ABAddressBook.shared()?.me(){
             
-            if let firstName = me.value(forProperty: kABFirstNameProperty as String) as? String{
-                fileContent += "//\n//\tCreate by \(firstName)"
-                if let lastName = me.value(forProperty: kABLastNameProperty as String) as? String{
-                   fileContent += " \(lastName)"
-                }
-            }
+            fileContent += "//\n//\tCreate by Shane"
             
             
             fileContent += " on \(getTodayFormattedDay())\n//\tCopyright © \(getYear())"

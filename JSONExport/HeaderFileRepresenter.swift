@@ -94,12 +94,8 @@ class HeaderFileRepresenter : FileRepresenter{
     {
         if let me = ABAddressBook.shared()?.me(){
             fileContent += "//\n//\t\(self.className).\(lang.headerFileData.headerFileExtension!)\n"
-            if let firstName = me.value(forProperty: kABFirstNameProperty as String) as? String{
-                fileContent += "//\n//\tCreate by \(firstName)"
-                if let lastName = me.value(forProperty: kABLastNameProperty as String) as? String{
-                    fileContent += " \(lastName)"
-                }
-            }
+            fileContent += "//\n//\tCreate by Shane"
+
             
             
             fileContent += " on \(getTodayFormattedDay())\n//\tCopyright © \(getYear())"
@@ -109,7 +105,7 @@ class HeaderFileRepresenter : FileRepresenter{
             }
             
             fileContent += ". All rights reserved.\n//\n\n"
-            fileContent += "//\tModel file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport\n\n"
+//            fileContent += "//\tModel file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport\n\n"
         }
         
     }
